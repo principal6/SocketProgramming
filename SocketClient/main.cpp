@@ -18,7 +18,7 @@ int main()
 		memset(Input, 0, KInputBufferSize);
 		std::cin >> Input;
 
-		Client.Send(Input, strlen(Input));
+		Client.Send(Input, (int)strlen(Input));
 		if (Client.Receive() == false) break;
 	}
 	Client.ShutDownSending();
